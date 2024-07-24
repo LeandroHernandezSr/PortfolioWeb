@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,23 +15,23 @@
     <header>
         <div class="contenedor-navbar">
             <div class="cont-enlace">
-                <a href="#">Inicio</a>
+                <a href="#inicio">Inicio</a>
             </div>
             <div class="cont-enlace">    
-                <a href="#">Historial academico</a>
+                <a href="#historial">Historial academico</a>
             </div>
             <div class="cont-enlace">
-                <a href="#">Conocimientos</a>
+                <a href="#conocimientos">Conocimientos</a>
             </div>
             <div class="cont-enlace">    
-                <a href="#">Experiencia laboral</a>
+                <a href="#experiencia">Experiencia laboral</a>
             </div>
             <div class="cont-enlace">    
                 <a href="#">Proyectos</a>
             </div>    
         </div>
     </header>
-    <div class="contenedor-presentacion">
+    <div class="contenedor-presentacion" id="inicio">
         <div class="titulo-presentacion">
             <h1>Leandro Hernández</h1>
             <h2>Desarrollador fullstack</h2>
@@ -38,10 +40,14 @@
             <img class="img-principal" src="imgs/d8d72e5e-b918-4cbd-b207-c6e971d24540.jpg"/>
         </div>
         <div class="contenedor-titulo">
+            <div class="contenedor-links">
+                <p><a href="#"><img class="img-link" src="imgs/github.png"></a></p>
+                <p><a href="#"><img class="img-link" src="imgs/logotipo-de-linkedin.png"></a></p>
+            </div>
             <p>Soy un desarrollador de software con 2 años de experiencia y actualmente estudio Ingeniería en Computación. Me gradué con un Bachiller en Informática con énfasis en desarrollo web. La tecnología y la innovación son mis pasiones, y siempre estoy buscando oportunidades para aprender y crecer en el campo del desarrollo de software.</p>
         </div>
     </div>
-    <div class="contenedor-historial">
+    <div class="contenedor-historial" id="historial">
         <h2>Historial académico</h2>
         <div class="contenedor-lista">
             <ul class="lista-academias">
@@ -58,8 +64,148 @@
             </ul>
         </div>
     </div>
-    <div class="contenedor-conocimientos">
-        <h1>hola</h1>
+    <div class="contenedor-conocimientos" id="conocimientos">
+        <h2>Conocimientos</h2>
+        <div class="contenedor-iconos-conocimiento">
+     
+            <div class="objeto-conocimiento">
+                <h3>Java</h3>
+                <img src="imgs/java.png" class="imagen-conocimiento">
+                <ul class="lista-conocimientos">
+                    <li><p>Programación Orientada a Objetos (POO)</p></li>
+                    <li><p>Java SE (Standard Edition)</p></li>
+                    <li><p>Spring Framework</p></li>
+                    <li><p>Hibernate</p></li>
+                    <li><p>Servlets y JSP</p></li>
+                    <li><p>Thymeleaf</p></li>
+                    <li><p>Maven</p></li>
+                    <li><p>Gradle</p></li>
+                </ul>
+            </div>
+
+            <div class="objeto-conocimiento">
+                <h3>PHP</h3>
+                <img src="imgs/php.png" class="imagen-conocimiento">
+                <ul class="lista-conocimientos">
+                    <li><p>Fundamentos de PHP</p></li>
+                    <li><p>Programación Orientada a Objetos (POO)</p></li>
+                    <li><p>Desarrollo Web con PHP</p></li>
+                    <li><p>APIs y Servicios Web</p></li>
+                    <li><p>Seguridad en PHP</p></li>
+                    <li><p>Despliegue y Configuración</p></li>
+                </ul>
+            </div>
+            
+            <div class="objeto-conocimiento">
+                <h3>CSS</h3>
+                <img src="imgs/css-3.png" class="imagen-conocimiento">
+                <ul class="lista-conocimientos">
+                    <li><p>Fundamentos de CSS</p></li>
+                    <li><p>Box Model</p></li>
+                    <li><p>Layout</p></li>
+                    <li><p>Responsive Design</p></li>
+                    <li><p>Flexbox</p></li>
+                    <li><p>CSS Grid</p></li>
+                    <li><p>Animaciones y Transiciones</p></li>
+                    <li><p>Variables CSS</p></li>
+                </ul>
+            </div>
+
+            <div class="objeto-conocimiento">
+                <h3>HTML</h3>
+                <img src="imgs/html-5.png" class="imagen-conocimiento">
+                <ul class="lista-conocimientos">
+                    <li><p>Fundamentos de HTML</p></li>
+                    <li><p>Etiquetas Básicas</p></li>
+                    <li><p>Formularios</p></li>
+                    <li><p>Multimedia</p></li>
+                    <li><p>SEO</p></li>
+                    <li><p>Accesibilidad</p></li>
+                    <li><p>HTML5</p></li>
+                </ul>
+                
+            </div>
+
+            <div class="objeto-conocimiento">
+                <h3>Javascript</h3>
+                <img src="imgs/logotipo-de-java-script.png" class="imagen-conocimiento">
+                <ul class="lista-conocimientos">
+                    <li><p>Fundamentos de JavaScript</p></li>
+                    <li><p>DOM Manipulation</p></li>
+                    <li><p>Eventos</p></li>
+                    <li><p>Ajax</p></li>
+                    <li><p>ES6 y versiones posteriores</p></li>
+                    <li><p>Promesas y Async/Await</p></li>
+                    <li><p>APIs del navegador</p></li>
+                    <li><p>Módulos</p></li>
+                </ul>
+                
+            </div>
+
+            <div class="objeto-conocimiento">
+                <h3>Mysql</h3>
+                <img src="imgs/mysql.png" class="imagen-conocimiento">
+                <ul class="lista-conocimientos">
+                    <li><p>Fundamentos de MySQL</p></li>
+                    <li><p>Consultas SQL</p></li>
+                    <li><p>Diseño de Bases de Datos</p></li>
+                    <li><p>Modelado de Datos</p></li>
+                    <li><p>Optimización de Consultas</p></li>
+                    <li><p>Índices</p></li>
+                    <li><p>Backups y Recuperación</p></li>
+                </ul>
+                
+            </div>
+
+            <div class="objeto-conocimiento">
+                <h3>Git</h3>
+                <img src="imgs/git.png" class="imagen-conocimiento">
+                <ul class="lista-conocimientos">
+                    <li><p>Fundamentos de Git</p></li>
+                    <li><p>Control de Versiones</p></li>
+                    <li><p>Ramas y Fusionado (Merging)</p></li>
+                    <li><p>Resolución de Conflictos</p></li>
+                    <li><p>Commits y Mensajes de Commit</p></li>
+                    <li><p>Rebase</p></li>
+                    <li><p>Gestión de Remotos (Push/Pull/Fetch)</p></li>
+                    <li><p>Configuración de Git</p></li>
+                    <li><p>Trabajo con Repositorios Remotos (GitHub, GitLab)</p></li>
+                </ul>
+            </div>
+        </div>
     </div>
+
+    <div class="experiencia-laboral" id="experiencia">
+        <h2>Experiencia laboral</h2>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.contenedor-iconos-conocimiento').slick({
+                dots: true,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                adaptiveHeight: true
+            });
+        });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script>
+        anime({
+            targets: '.line-drawing-demo path',
+            strokeDashoffset: [anime.setDashoffset, 0],
+            easing: 'easeInOutSine',
+            duration: 1500,
+            delay: function(el, i) { return i * 250 },
+            direction: 'alternate',
+            loop: true
+        });
+    </script>
 </body>
 </html>
