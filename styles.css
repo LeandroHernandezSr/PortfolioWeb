@@ -67,9 +67,10 @@ body, html {
     justify-content: center;
     z-index: 1;
     position: relative;
-    font-family:"Tiny5", sans-serif;
+    font-family: "Tiny5", sans-serif;
     animation-name: aparicion;
     animation-duration: 5s;
+    margin-bottom: 0;
 }
 
 .contenedor-imagen {
@@ -82,9 +83,9 @@ body, html {
     justify-content: center;
     margin-left: 1rem;
     animation-name: flotar;
-    animation-duration: 3s; /* Duración de la animación en segundos */
-    animation-timing-function: ease-in-out; /* Suaviza la animación */
-    animation-iteration-count: infinite; /* Repite la animación indefinidamente */
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
 }
 
 .imagen-perfil {
@@ -109,23 +110,54 @@ body, html {
     text-align: center;
 }
 
+.contenedor-conocimientos {
+    z-index: 1;
+    position: relative;
+    margin: 20px;
+    padding: 20px;
+    animation-name: aparicion;
+    animation-duration: 5s;
+    margin-top: 0;
+}
+
+.contenedor-conocimientos > p {
+    color: white;
+    font-size: 1.2rem;
+    font-family: "Tiny5", sans-serif;
+    text-align: center;
+    animation-name: flotar;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.conocimientos-iconos{
+    width: 60%;
+    margin: 0 auto;
+}
+
+svg{
+    position: relative;
+    z-index: 1;
+}
+
 @keyframes flotar {
     0% {
-        transform: translateY(-5px); /* Ajusta el valor según lo necesario */
+        transform: translateY(-5px);
     }
     50% {
         transform: translateY(0);
     }
-    100%{
+    100% {
         transform: translateY(-5px);
     }
 }
 
 @keyframes aparicion {
     from {
-        opacity: 0%;
+        opacity: 0;
     }
     to {
-        opacity: 100%;
+        opacity: 1;
     }
 }
