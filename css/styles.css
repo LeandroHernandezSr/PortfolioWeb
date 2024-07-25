@@ -1,5 +1,11 @@
+:root {
+    ---fuente-subtitulos: "Aldrich", sans-serif;
+    ---fuente-parrafos: "Roboto Condensed", sans-serif;
+}
+
 /* Resetear márgenes y padding de body y html */
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
     height: 100%;
@@ -13,6 +19,7 @@ body {
     align-items: stretch;
     background-color: #070F2B;
     min-height: 100vh;
+    /* overflow: hidden; */
 }
 
 /* Ajuste para los contenedores */
@@ -26,7 +33,7 @@ body {
     min-height: 100vh;
 }
 
-.contenedor-historial{
+.contenedor-historial {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -72,7 +79,7 @@ header {
 }
 
 /* Estilo para los enlaces */
-.cont-enlace > a {
+.cont-enlace>a {
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -122,10 +129,12 @@ header {
     margin-bottom: 1rem;
 }
 
+
 @keyframes animacionAparicion {
     from {
         opacity: 0%;
     }
+
     to {
         opacity: 100%;
     }
@@ -135,9 +144,11 @@ header {
     0% {
         transform: translateY(-5px);
     }
+
     50% {
         transform: translateY(0);
     }
+
     100% {
         transform: translateY(-5px);
     }
@@ -163,6 +174,9 @@ header {
     height: 9rem;
     border-radius: 50%;
     object-fit: cover;
+    -webkit-box-shadow: -1px 24px 26px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -1px 24px 26px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -1px 24px 26px 0px rgba(0, 0, 0, 0.75);
 }
 
 /* Estilos para historial */
@@ -177,11 +191,11 @@ header {
     color: white;
 }
 
-.titulo-presentacion > h1 {
+.titulo-presentacion>h1 {
     margin-bottom: 0;
 }
 
-.titulo-presentacion > h2 {
+.titulo-presentacion>h2 {
     text-align: center;
     font-size: 1.5rem;
     margin-top: 0;
@@ -208,18 +222,21 @@ header {
 }
 
 .objeto-academia {
-    border: 1px solid white;
-    border-radius: 2%;
+    background-color: #535c91a3;
+    border-radius: 10px;
     width: 35%;
     padding: 1rem;
+    -webkit-box-shadow: 1px 18px 18px -3px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 1px 18px 18px -3px rgba(0, 0, 0, 0.75);
+    box-shadow: 1px 18px 18px -3px rgba(0, 0, 0, 0.75);
 }
 
-.objeto-academia > p {
+.objeto-academia>p {
     text-align: center;
     font-size: var(--tamaño-parrafo);
 }
 
-.objeto-academia > h3 {
+.objeto-academia>h3 {
     font-size: 1.2rem;
     text-align: center;
     width: 100%;
@@ -266,6 +283,8 @@ h2 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: #1b1a55a1;
+    border-radius: 10px;
 }
 
 .contenedor-iconos-conocimiento {
@@ -280,6 +299,76 @@ h2 {
 }
 
 /* Estilos para experiencia laboral */
-.experiencia-laboral {
-    background-color: #9290C3;
+.contenedor-proyectos {
+    background-color: #070F2B;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
+
+.subcontenedor-proyectos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap-reverse;
+}
+
+.imagen-proyecto {
+    width: 20rem;
+    height: 10rem;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.objeto-proyecto {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #1B1A55;
+    padding: 1rem;
+    border-radius: 10px;
+    -webkit-box-shadow: 1px 18px 18px -3px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 1px 18px 18px -3px rgba(0, 0, 0, 0.75);
+    box-shadow: 1px 18px 18px -3px rgba(0, 0, 0, 0.75);
+    z-index: 1;
+  }
+  
+  .objeto-proyecto:hover {
+    -webkit-box-shadow: 0px 20px 15px 19px rgba(0,0,0,0.29);
+    -moz-box-shadow: 0px 20px 15px 19px rgba(0,0,0,0.29);
+    box-shadow: 0px 20px 15px 19px rgba(0,0,0,0.29);
+    transform: scale(1.5);
+    transition-duration: 0.6s;
+    z-index: 3;
+  }
+
+.descripcion-proyecto{
+    display: none;
+}
+
+.titulo-proyecto{
+    display: none;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(---fuente-subtitulos);
+    color: white;
+}
+
+h1,h2{
+    font-size: 1.5rem;
+}
+
+p {
+    font-family: var(---fuente-parrafos);
+}
+
