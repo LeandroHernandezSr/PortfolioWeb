@@ -1,8 +1,3 @@
-:root {
-    --tamaño-parrafo: 14px;
-    --fuente-titulo: "Roboto Condensed", sans-serif;
-}
-
 /* Resetear márgenes y padding de body y html */
 html, body {
     margin: 0;
@@ -17,6 +12,27 @@ body {
     flex-direction: column;
     align-items: stretch;
     background-color: #070F2B;
+    min-height: 100vh;
+}
+
+/* Ajuste para los contenedores */
+.contenedor-presentacion,
+.contenedor-conocimientos,
+.experiencia-laboral {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.contenedor-historial{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
 }
 
 /* Estilo para el header */
@@ -67,19 +83,14 @@ header {
     height: 100%;
 }
 
-/* Estilo para el main */
-.contenedor-presentacion {
-    min-height: 100vh; /* Ajuste para asegurar mayor altura */
-    width: 100%;
-    margin-top: 3rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    background: rgb(7, 15, 43);
+/* Estilo para el contenedor de presentación */
+.subcontenedor-presentacion {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    width: 100%;
 }
 
 /* Ajuste para el contenedor de enlaces */
@@ -100,7 +111,7 @@ header {
     margin: 0 auto;
 }
 
-/* Ajuste para el contenedor de título */
+/* Estilo para el contenedor de título */
 .contenedor-titulo {
     color: white;
     width: 100%;
@@ -157,9 +168,6 @@ header {
 /* Estilos para historial */
 .contenedor-historial {
     background-color: #1B1A55;
-    min-height: 70rem;
-    width: 100%;
-    padding: 2rem 0;
 }
 
 /* Estilos para la presentación */
@@ -196,6 +204,7 @@ header {
     gap: 2.2rem;
     padding-top: 2rem;
     padding-bottom: 10rem;
+    width: 100rem;
 }
 
 .objeto-academia {
@@ -224,9 +233,14 @@ header {
 /* Estilos para conocimientos */
 .contenedor-conocimientos {
     background-color: #535C91;
+}
+
+.subcontenedor-conocimientos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    min-height: 50rem;
-    font-family: var(--fuente-titulo);
 }
 
 h2 {
@@ -268,7 +282,4 @@ h2 {
 /* Estilos para experiencia laboral */
 .experiencia-laboral {
     background-color: #9290C3;
-    min-height: 70rem;
-    width: 100%;
-    padding: 2rem 0;
 }
