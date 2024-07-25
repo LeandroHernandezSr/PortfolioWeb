@@ -1,6 +1,6 @@
 :root {
-    --fuente-subtitulos: "Aldrich", sans-serif;
-    --fuente-parrafos: "Roboto Condensed", sans-serif;
+    ---fuente-subtitulos: "Aldrich", sans-serif;
+    ---fuente-parrafos: "Roboto Condensed", sans-serif;
 }
 
 /* Resetear márgenes y padding de body y html */
@@ -19,14 +19,23 @@ body {
     align-items: stretch;
     background-color: #070F2B;
     min-height: 100vh;
+    /* overflow: hidden; */
 }
 
 /* Ajuste para los contenedores */
 .contenedor-presentacion,
 .contenedor-conocimientos,
-.contenedor-proyectos,
+.experiencia-laboral {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+}
+
 .contenedor-historial {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -75,7 +84,7 @@ header {
     display: flex;
     align-items: center;
     font-size: 12px;
-    font-family: var(--fuente-parrafos);
+    font-family: "Roboto Condensed", sans-serif;
     color: white;
     padding: 0 10px;
     height: 100%;
@@ -114,17 +123,18 @@ header {
     color: white;
     width: 100%;
     font-size: var(--tamaño-parrafo);
-    font-family: var(--fuente-parrafos);
+    font-family: "Roboto Condensed", sans-serif;
     animation-name: animacionAparicion;
     animation-duration: 8s;
     margin-bottom: 1rem;
 }
 
-/* Animaciones */
+
 @keyframes animacionAparicion {
     from {
         opacity: 0%;
     }
+
     to {
         opacity: 100%;
     }
@@ -134,9 +144,11 @@ header {
     0% {
         transform: translateY(-5px);
     }
+
     50% {
         transform: translateY(0);
     }
+
     100% {
         transform: translateY(-5px);
     }
@@ -162,6 +174,8 @@ header {
     height: 9rem;
     border-radius: 50%;
     object-fit: cover;
+    -webkit-box-shadow: -1px 24px 26px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -1px 24px 26px 0px rgba(0, 0, 0, 0.75);
     box-shadow: -1px 24px 26px 0px rgba(0, 0, 0, 0.75);
 }
 
@@ -172,7 +186,7 @@ header {
 
 /* Estilos para la presentación */
 .titulo-presentacion {
-    font-family: var(--fuente-parrafos);
+    font-family: "Roboto Condensed", sans-serif;
     font-size: 1.4rem;
     color: white;
 }
@@ -194,7 +208,7 @@ header {
 
 .lista-academias {
     list-style-type: none;
-    font-family: var(--fuente-parrafos);
+    font-family: "Roboto Condensed", sans-serif;
     color: white;
     padding: 0;
     display: flex;
@@ -204,7 +218,7 @@ header {
     gap: 2.2rem;
     padding-top: 2rem;
     padding-bottom: 10rem;
-    width: 100%;
+    width: 100rem;
 }
 
 .objeto-academia {
@@ -212,6 +226,8 @@ header {
     border-radius: 10px;
     width: 35%;
     padding: 1rem;
+    -webkit-box-shadow: 1px 18px 18px -3px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 1px 18px 18px -3px rgba(0, 0, 0, 0.75);
     box-shadow: 1px 18px 18px -3px rgba(0, 0, 0, 0.75);
 }
 
@@ -245,7 +261,7 @@ header {
 }
 
 h2 {
-    font-family: var(--fuente-subtitulos);
+    font-family: var(--fuente-titulo);
     color: white;
     font-size: 1.5rem;
     text-align: center;
@@ -292,7 +308,7 @@ h2 {
     min-height: 100vh;
 }
 
-.subcontenedor-proyectos {
+.subcontenedor-proyectos{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -306,26 +322,58 @@ h2 {
     height: 10rem;
     border-radius: 10px;
     object-fit: cover;
-    margin: 1rem;
-    box-shadow: -1px 24px 26px 0px rgba(0, 0, 0, 0.75);
 }
 
 .objeto-proyecto {
+    color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 20rem;
-    background-color: #535C91;
+    text-align: center;
+    background-color: #1B1A55;
     padding: 1rem;
     border-radius: 10px;
+    -webkit-box-shadow: 1px 18px 18px -3px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 1px 18px 18px -3px rgba(0, 0, 0, 0.75);
+    box-shadow: 1px 18px 18px -3px rgba(0, 0, 0, 0.75);
+    z-index: 1;
+  }
+  
+  .objeto-proyecto:hover {
+    -webkit-box-shadow: 0px 20px 15px 19px rgba(0,0,0,0.29);
+    -moz-box-shadow: 0px 20px 15px 19px rgba(0,0,0,0.29);
+    box-shadow: 0px 20px 15px 19px rgba(0,0,0,0.29);
+    transform: scale(1.5);
+    transition-duration: 0.6s;
+    z-index: 3;
+  }
+
+.descripcion-proyecto{
+    display: none;
 }
 
-.objeto-proyecto>p {
+
+.animacion-aparicion{
+    animation-name: animacionAparicion;
+    animation-duration: 8s;
+}
+
+.titulo-proyecto{
+    display: none;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(---fuente-subtitulos);
     color: white;
 }
 
-.objeto-proyecto:hover {
-    transition-duration: 0.6s;
-    transform: scale(1.05);
+h1,h2{
+    font-size: 1.5rem;
+}
+
+p {
+    font-family: var(---fuente-parrafos);
 }
