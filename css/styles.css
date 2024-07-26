@@ -23,7 +23,7 @@ body {
     /* overflow: hidden; */
 }
 
-.cuerpo-principal{
+.cuerpo-principal {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -53,23 +53,21 @@ body {
 
 /* Estilo para el header */
 header {
-    position: fixed;
-    top: 38vh;
-    /* Usando vh para una posición relativa a la altura de la ventana */
-    right: 1vh;
-    /* Usando vw para alinearlo completamente a la izquierda */
-    width: 10%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 400px;
     background-color: rgba(255, 255, 255, 0.539);
     display: flex;
     justify-content: center;
-    height: 20vh;
-    /* Usando vh para la altura del header */
     align-items: center;
+    height: 10vh;
     z-index: 1000;
     animation-name: animacionAparicion;
     animation-duration: 8s;
 }
-
 
 /* Estilo para el contenedor de navegación */
 .contenedor-navbar {
@@ -77,6 +75,8 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-direction: row;
+    text-align: center;
     width: 100%;
     height: 100%;
 }
@@ -427,13 +427,13 @@ p {
         top: 0;
         left: 50%;
         transform: translateX(-50%);
-        width: 80%; 
-        max-width: 400px; 
+        width: 80%;
+        max-width: 400px;
         background-color: rgba(255, 255, 255, 0.539);
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 10vh; 
+        height: 10vh;
         z-index: 1000;
         animation-name: animacionAparicion;
         animation-duration: 8s;
@@ -444,7 +444,7 @@ p {
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        width: 100%; 
+        width: 100%;
         height: 100%;
     }
 }
