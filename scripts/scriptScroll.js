@@ -3,9 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function applyStyles() {
         if (window.innerWidth <= 767) {
-            body.style.overflow = 'hidden';
+            body.style.overflowY = 'hidden';  
         } else {
-            body.style.overflow = ''; 
+            body.style.overflowY = ''; 
         }
     }
 
