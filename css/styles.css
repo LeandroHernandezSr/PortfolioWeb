@@ -455,27 +455,12 @@ p {
 and (min-device-width: 390px) 
 and (max-device-height: 844px) 
 and (-webkit-min-device-pixel-ratio: 3) {
-    .descripcion-presentacion {
-        font-size: 15px;
-        width: 80%;
-        margin: 0 auto;
-    }
-
-    .lista-academias {
-        width: 80%;
-        padding-top: 1rem;
-        padding-bottom: 5rem;
-    }
-
-    header {
-        width: 100%;
-    }
-
     .titulo-presentacion > h1,h2{
        font-size: 0.8rem;
     }
 }
 
+/*
 @media only screen 
 and (min-device-width: 428px) 
 and (max-device-height: 926px) 
@@ -496,3 +481,5 @@ and (-webkit-min-device-pixel-ratio: 3.5) {
         width: 100%;
     }
 }
+
+*/
