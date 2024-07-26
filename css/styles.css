@@ -157,8 +157,8 @@ header {
 /* Estilos para la foto de perfil */
 .contenedor-imagen {
     border-radius: 50%;
-    height: 10rem;
-    width: 10rem;
+    height: 18rem;
+    width: 18rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -170,8 +170,8 @@ header {
 }
 
 .img-principal {
-    width: 9rem;
-    height: 9rem;
+    width: 17rem;
+    height: 17rem;
     border-radius: 50%;
     object-fit: cover;
     -webkit-box-shadow: -1px 24px 26px 0px rgba(0, 0, 0, 0.75);
