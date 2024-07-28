@@ -61,6 +61,7 @@ header {
     animation-duration: 8s;
     flex-direction: column;
     gap: 0.5rem;
+    margin-bottom: 0;
 }
 
 /* Estilo para el contenedor de navegación */
@@ -80,6 +81,7 @@ header {
     text-align: center;
     background-color: rgba(255, 255, 255, 0.539);
     margin-top: 0.5rem;
+    margin-bottom: 0;
 }
 
 .contenedor-navbar.show {
@@ -138,6 +140,7 @@ header {
     align-items: center;
     text-align: center;
     width: 100%;
+    margin-top: 0;
 }
 
 /* Ajuste para el contenedor de enlaces */
@@ -460,7 +463,10 @@ p {
         opacity: 1;
     }
     
-
+    .subcontenedor-presentacion{
+        margin-top: 0;
+        padding-top: 0;
+    }
 }
 
 /* iPhone 12, 12 Pro */
