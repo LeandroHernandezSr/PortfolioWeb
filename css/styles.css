@@ -472,13 +472,8 @@ p {
         width: 50rem;
     }
 
-    .contenedor-navbar {
-        flex-direction: column;
-    }
-    
-    .contenedor-navbar.show {
-        max-height: 10rem;
-        opacity: 1;
+    .header-contenedor{
+        display: none;
     }
 }
 
@@ -489,6 +484,10 @@ and (max-device-height: 844px)
 and (-webkit-min-device-pixel-ratio: 3) {
     .titulo-presentacion > h1,h2{
        font-size: 0.8rem;
+    }
+
+    .header-contenedor{
+        display: none;
     }
 }
 
