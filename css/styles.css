@@ -3,6 +3,14 @@
     ---fuente-parrafos: "Roboto Condensed", sans-serif;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
 /* Resetear márgenes y padding de body y html */
 html,
 body {
@@ -32,7 +40,6 @@ body {
 }
 
 /* Ajuste para los contenedores */
-.contenedor-presentacion,
 .contenedor-conocimientos,
 .experiencia-laboral {
     display: flex;
@@ -40,6 +47,16 @@ body {
     justify-content: center;
     width: 100%;
     min-height: 100vh;
+}
+
+.contenedor-presentacion{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    margin-top: 0;
 }
 
 .contenedor-historial {
@@ -52,7 +69,7 @@ body {
 }
 
 /* Estilo para el header */
-header {
+.header-contenedor {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -114,6 +131,7 @@ header {
 .cont-enlace:hover {
     background-color: #070F2B;
     transition-duration: 0.6s;
+    border-radius: 5px;
 }
 
 .flecha-arriba{
@@ -461,11 +479,6 @@ p {
     .contenedor-navbar.show {
         max-height: 10rem;
         opacity: 1;
-    }
-    
-    .subcontenedor-presentacion{
-        margin-top: 0;
-        padding-top: 0;
     }
 }
 
