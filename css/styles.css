@@ -56,7 +56,7 @@ body {
     flex-direction: column;
     width: 100%;
     min-height: 100vh;
-    margin-top: 0;
+    padding-top: 0;
 }
 
 .contenedor-historial {
@@ -97,7 +97,7 @@ body {
     padding: 0.5rem;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.539);
-    margin-top: 0.5rem;
+    margin-top: 0;
     margin-bottom: 0;
 }
 
