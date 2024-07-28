@@ -53,36 +53,43 @@ body {
 
 /* Estilo para el header */
 header {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80%;
-    max-width: 400px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 10vh;
-    z-index: 1000;
     animation-name: animacionAparicion;
     animation-duration: 8s;
     flex-direction: column;
-    gap: 1rem;
+    gap: 0.5rem;
 }
 
 /* Estilo para el contenedor de navegación */
 .contenedor-navbar {
-    display: none;
-    flex-direction: column;
+    display: flex;
+    flex-direction: row; /* Mantiene los elementos en fila */
     justify-content: center;
     align-items: center;
-    flex-direction: row;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+    gap: 1rem;
+    width: 40%;
+    border-radius: 5px;
+    padding: 0.5rem;
     text-align: center;
-    width: 100%;
-    height: 100%;
     background-color: rgba(255, 255, 255, 0.539);
+    margin-top: 0.5rem;
 }
 
+.contenedor-navbar.show {
+    max-height: 100px; /* Ajusta según sea necesario */
+    opacity: 1;
+}
+
+.flecha-arriba {
+    display: none;
+}
 .contenedor-flecha{
     background-color: rgba(255, 255, 255, 0.539);
     border-radius: 50%;
@@ -95,16 +102,20 @@ header {
 }
 
 /* Estilo para los enlaces en el navbar */
-.cont-enlace {
-    height: 100%;
-    width: 100%;
+.cont-enlace{
     text-align: center;
+    height: 100%;
+    padding: 0.5rem;
 }
 
 /* Efecto hover para los enlaces */
 .cont-enlace:hover {
     background-color: #070F2B;
     transition-duration: 0.6s;
+}
+
+.flecha-arriba{
+    display: none;
 }
 
 /* Estilo para los enlaces */
@@ -158,6 +169,11 @@ header {
     margin-bottom: 1rem;
 }
 
+.animacion-aparicion-clase{
+    animation-name: animacionAparicion;
+    animation-duration: 8s;
+    margin-bottom: 1rem;
+}
 
 @keyframes animacionAparicion {
     from {
@@ -435,31 +451,16 @@ p {
         width: 50rem;
     }
 
-    header {
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 80%;
-        max-width: 400px;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 10vh;
-        z-index: 1000;
-        animation-name: animacionAparicion;
-        animation-duration: 8s;
-    }
-
     .contenedor-navbar {
-        display: none;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100%;
+        flex-direction: column;
     }
+    
+    .contenedor-navbar.show {
+        max-height: 10rem;
+        opacity: 1;
+    }
+    
+
 }
 
 /* iPhone 12, 12 Pro */
@@ -472,26 +473,3 @@ and (-webkit-min-device-pixel-ratio: 3) {
     }
 }
 
-/*
-@media only screen 
-and (min-device-width: 428px) 
-and (max-device-height: 926px) 
-and (-webkit-min-device-pixel-ratio: 3.5) {
-    .descripcion-presentacion {
-        font-size: 16px;
-        width: 80%;
-        margin: 0 auto;
-    }
-
-    .lista-academias {
-        width: 80%;
-        padding-top: 1rem;
-        padding-bottom: 5rem;
-    }
-
-    header {
-        width: 100%;
-    }
-}
-
-*/
